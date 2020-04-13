@@ -1,62 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+    padding: 10px;
 }
 
-#header {
-
-    font-family: 'Lobster', cursive;
+.brand {
+    font-family: 'Rock Salt', cursive;
+    font-weight: normal;
+    font-size: 60px;
     text-align: center;
-    font-size: 50px;
 }
 
-.box {
+/* Black Line under Header */
+.brand-header {
+    border-bottom: 1px solid black;
+}
+
+.row {
     display: flex;
+    width: 100%;
+    align-items: stretch;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
 }
 
-.one {
-    flex: 1 1;
-    color: black;
-    border: 1px solid black;
-    padding: 10px;
+.story {
+    border-right: 1px solid black;
+    padding: 0 10px; /* Internal-Space within ALL context*/ 
+    font-family: 'Open Sans', sans-serif;
+
+
 }
 
-.two {
-    flex: 1 1;
-    min-width: 50%;
+.main-story {
+    width: 50%; /* Breaking Story Internal-Space + 50% +  25% each side =100% */
 }
 
-.three {
-    flex: 1 1;
-    color: black;
-    border: 1px solid black;
-    padding: 10px;
+.quarter {
+    width: 25%;
 }
 
-.four {
-    flex: 1 3;
-    color: black;
-    border: 1px solid black;
-    padding: 10px;
+.three-quarter {
+    width: 75%; /* 75% os the section side*/
 }
 
+.article-img {
+    width: 100%;
+}
 
+.article-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold; 
+}
 
-.center-corgi {
+.the-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.site-section {
+    display: flex;
+    align-items: center;
     flex: 1;
 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    /* this is the same as: flex: 1; */
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto; */
 }
 
-.center-text {
-    text-align: center;
-}
-
-#corgi-space {
+.section-link {
     color: black;
-    border: 1px solid black;
-    padding: 10px;
+    text-decoration: none;
+    font-size: 30px;
+    padding-left: 30px;
+    font-weight: bold;
+    font-family: "Futura";
+    color: #666;
+}
+
+.section-link:hover {
+    text-decoration: underline;
+}
+
+.site-section-local {
+    background-color: #55efc4;
+}
+
+.site-section-tech {
+    background-color: #81ecec;
+}
+
+.site-section-opinion {
+    background-color: #74b9ff;
+}
+
+.site-section-sports {
+    background-color: #a29bfe;
+}
+
+.site-section-politics {
+    background-color: #ffeaa7;
 }
